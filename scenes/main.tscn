@@ -1,0 +1,479 @@
+[gd_scene format=3 uid="uid://biju7fhjiginh"]
+
+[ext_resource type="Script" uid="uid://ddv26td7l6jcq" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://drq2ogxx3ywfs" path="res://scripts/elevenlabs.gd" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://cwfioeqnipyre" path="res://scripts/streamerbot.gd" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bviex80uj30gc" path="res://assets/emotiguy/emotigrease.fbx" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://cdh557pettqao" path="res://scenes/control.gd" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://n63kn0gikt7d" path="res://scenes/ui.tscn" id="6_tefeu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jyhfs"]
+
+[sub_resource type="Sky" id="Sky_tbgi4"]
+sky_material = SubResource("ProceduralSkyMaterial_jyhfs")
+
+[sub_resource type="Environment" id="Environment_tefeu"]
+background_mode = 2
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_tbgi4")
+
+[sub_resource type="Animation" id="Animation_tefeu"]
+resource_name = "OUT"
+length = 0.333
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("emotigrease:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.009850971, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.14480928)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("emotigrease:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.13333334, -0.020661391, 0.495, -0.09195306, 0.017867267, 0, 0, -10.645, 0, 4.4794617, 0, 0),
+"times": PackedFloat32Array(0, 0.2155, 0.3313)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("emotigrease:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.009850971, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.14480928)
+}
+
+[sub_resource type="Animation" id="Animation_jyhfs"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("emotigrease:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("emotigrease:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-7.455, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("emotigrease:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_tbgi4"]
+resource_name = "in"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("emotigrease:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.048333332, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.29)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("emotigrease:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(-2.895, 0, 0, 0.13333334, 4.8332686, -0.19376767, -0.054823186, 0.6679145, 0.03333333, -0.40610218, 0, -0.13333333, 0.11080897, 0.25, 0),
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("emotigrease:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.048333332, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.29)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tefeu"]
+_data = {
+&"OUT": SubResource("Animation_tefeu"),
+&"RESET": SubResource("Animation_jyhfs"),
+&"in": SubResource("Animation_tbgi4")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyhfs"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
+font_size = 26
+outline_size = 3
+outline_color = Color(0.8150196, 3.5857408e-06, 7.70092e-07, 1)
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tipki"]
+
+[node name="Main" type="Node3D" unique_id=561925697]
+script = ExtResource("1_o5qli")
+
+[node name="ElevenLabs" type="Node" parent="." unique_id=676892882 node_paths=PackedStringArray("ui")]
+unique_name_in_owner = true
+script = ExtResource("2_0wfyh")
+ui = NodePath("../UI")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="ElevenLabs" unique_id=2062124137]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ElevenLabs" unique_id=1239263919]
+bus = &"TTS"
+
+[node name="StreamerBOT" type="Node" parent="." unique_id=1446592886]
+script = ExtResource("3_sugp2")
+
+[node name="emotigrease" parent="." unique_id=1194472428 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, -7.455, 0)
+
+[node name="Skeleton3D" parent="emotigrease/Emoti" parent_id_path=PackedInt32Array(1194472428, 1458238524) index="0" unique_id=1908446497]
+bones/0/position = Vector3(0, 0.009525061, -0.11429999)
+bones/0/rotation = Quaternion(0.7156746, 1.4901159e-08, 1.8626449e-09, 0.69843394)
+bones/1/position = Vector3(0.30861586, 0.68231773, -0.013621333)
+bones/1/rotation = Quaternion(0.6925706, 0.20296068, 0.67422503, -0.15675959)
+bones/1/scale = Vector3(1, 0.9999999, 1)
+bones/2/position = Vector3(0.0761533, 0.6021051, -0.060735833)
+bones/2/rotation = Quaternion(-0.38411352, -0.38405994, -0.26910412, 0.7953225)
+bones/2/scale = Vector3(0.99998116, 1.0000234, 0.9999846)
+bones/3/position = Vector3(-2.932838e-08, 0.09745815, -2.6924462e-07)
+bones/3/rotation = Quaternion(0.13491078, 0.18681991, 0.06627078, 0.9708273)
+bones/3/scale = Vector3(1.0000012, 0.9999866, 1.0000169)
+bones/4/position = Vector3(-9.775369e-08, 0.08226178, 9.7207476e-08)
+bones/4/rotation = Quaternion(-4.8428774e-08, -3.222376e-07, 1.04308114e-07, 1)
+bones/4/scale = Vector3(0.99999994, 0.99999994, 0.99999994)
+bones/6/position = Vector3(0.07123178, 0.73783803, 0.016159492)
+bones/6/rotation = Quaternion(0.015824646, 0.02996442, -0.15072505, 0.9879948)
+bones/7/position = Vector3(-2.5795616e-08, 0.072677284, -2.7116695e-07)
+bones/7/rotation = Quaternion(-0.11337636, -0.15871109, 0.0359742, 0.980134)
+bones/7/scale = Vector3(1, 0.99999994, 1)
+bones/8/position = Vector3(9.491318e-08, 0.07921158, 5.2716068e-08)
+bones/8/rotation = Quaternion(-1.1734664e-07, -8.940698e-08, -4.842877e-08, 1)
+bones/8/scale = Vector3(1, 1.0000001, 1)
+bones/10/position = Vector3(-0.01814876, 0.7775539, 0.03702757)
+bones/10/rotation = Quaternion(-0.055549387, -0.0478874, 0.052532546, 0.9959224)
+bones/10/scale = Vector3(1.0000235, 0.9999859, 0.99996716)
+bones/11/position = Vector3(-2.2663551e-08, 0.041230563, -1.7355184e-08)
+bones/11/rotation = Quaternion(-0.1511094, -0.14367723, 0.02215598, 0.97776884)
+bones/11/scale = Vector3(1.0000001, 0.99999994, 1.0000001)
+bones/12/position = Vector3(-1.6790763e-08, 0.076218344, -1.0722992e-07)
+bones/12/rotation = Quaternion(1.07102105e-08, -7.2002884e-08, -2.1420421e-08, 1)
+bones/12/scale = Vector3(0.99999994, 0.9999999, 0.99999994)
+bones/14/position = Vector3(-0.12923631, 0.7382152, 0.0075492645)
+bones/14/rotation = Quaternion(0.029149942, 0.040434778, 0.024257157, 0.99846226)
+bones/14/scale = Vector3(1.0000441, 0.9999878, 1.0000213)
+bones/15/position = Vector3(1.3269549e-08, 0.04281791, -6.4441515e-08)
+bones/15/rotation = Quaternion(-0.106073834, -0.09931752, 0.10619766, 0.98366994)
+bones/15/scale = Vector3(0.99999994, 0.9999999, 1)
+bones/16/position = Vector3(9.548473e-09, 0.080314144, 9.035794e-08)
+bones/16/rotation = Quaternion(3.6321588e-08, 2.793968e-09, 4.8428777e-08, 1)
+bones/16/scale = Vector3(1.0000002, 1.0000001, 1)
+bones/18/position = Vector3(-0.30872837, 0.6835052, -0.013331111)
+bones/18/rotation = Quaternion(-0.6947691, 0.20270626, 0.67227095, 0.15574941)
+bones/18/scale = Vector3(0.9999874, 1.000027, 0.9999896)
+bones/19/position = Vector3(0.12917653, 0.738153, 0.008364685)
+bones/19/rotation = Quaternion(0.03005105, -0.043403905, -0.023955408, 0.9983182)
+bones/19/scale = Vector3(1.0000569, 1.0000008, 0.99998397)
+bones/20/position = Vector3(3.325058e-08, 0.04281783, 4.0248626e-08)
+bones/20/rotation = Quaternion(-0.10607392, 0.09931755, -0.10619765, 0.9836699)
+bones/20/scale = Vector3(0.99990916, 0.999964, 0.99996364)
+bones/21/position = Vector3(-1.7501613e-08, 0.08031421, -2.7788804e-08)
+bones/21/rotation = Quaternion(-1.1920929e-07, 2.3283064e-08, 9.313226e-09, 1)
+bones/21/scale = Vector3(1.0000002, 0.99999994, 0.9999999)
+bones/23/position = Vector3(-0.07573146, 0.6020544, -0.06137495)
+bones/23/rotation = Quaternion(-0.3843626, 0.38135576, 0.26846176, 0.7967192)
+bones/23/scale = Vector3(1.0000407, 0.99997604, 1.0000273)
+bones/24/position = Vector3(1.1056767e-07, 0.09745826, 5.4743996e-09)
+bones/24/rotation = Quaternion(0.13491085, -0.18682005, -0.066270985, 0.9708272)
+bones/24/scale = Vector3(1.0000001, 0.9999998, 1)
+bones/25/position = Vector3(-1.3121166e-07, 0.08226156, -4.573554e-08)
+bones/25/rotation = Quaternion(-9.685753e-08, 1.01514146e-07, 1.3690439e-07, 1)
+bones/25/scale = Vector3(0.99999994, 1, 1.0000001)
+bones/27/position = Vector3(-0.07133943, 0.73766357, 0.0157706)
+bones/27/rotation = Quaternion(0.016189411, -0.033048782, 0.15099224, 0.9878497)
+bones/27/scale = Vector3(0.99997383, 1.0000194, 0.9999983)
+bones/28/position = Vector3(3.1765857e-08, 0.07267753, -4.687087e-08)
+bones/28/rotation = Quaternion(-0.113376506, 0.15871134, -0.035974238, 0.9801339)
+bones/28/scale = Vector3(0.9999999, 0.9999999, 0.9999999)
+bones/29/position = Vector3(-5.1567028e-08, 0.079211354, -3.5776043e-08)
+bones/29/rotation = Quaternion(1.3131648e-07, -1.6763806e-07, -3.1664968e-08, 1)
+bones/29/scale = Vector3(1.0000001, 1, 0.99999994)
+bones/31/position = Vector3(0.017894385, 0.777389, 0.037239816)
+bones/31/rotation = Quaternion(-0.054587357, 0.04492802, -0.052413046, 0.9961198)
+bones/31/scale = Vector3(0.99996907, 0.99998176, 0.9999888)
+bones/32/position = Vector3(-1.2275965e-08, 0.041230474, 2.8351861e-08)
+bones/32/rotation = Quaternion(-0.15110925, 0.14367707, -0.022155937, 0.9777689)
+bones/32/scale = Vector3(0.9999999, 1.0000001, 1.0000001)
+bones/33/position = Vector3(3.4538605e-08, 0.07621817, -1.3499019e-07)
+bones/33/rotation = Quaternion(1.1175871e-08, -3.5506673e-08, 1.3969841e-08, 1)
+bones/33/scale = Vector3(1, 1.0000001, 0.9999999)
+bones/35/position = Vector3(0, 0.19532007, -1.4901161e-10)
+bones/35/rotation = Quaternion(0.02945414, 0, 0, 0.99956614)
+bones/35/scale = Vector3(1, 1.0000001, 1)
+bones/36/position = Vector3(0.143866, 0.8192092, -9.1795975e-09)
+bones/36/rotation = Quaternion(-0.008186196, -0.09394184, -0.08642523, 0.9917856)
+bones/36/scale = Vector3(1.0000118, 0.99996525, 0.9999406)
+bones/38/position = Vector3(-0.143866, 0.8192092, -9.1795975e-09)
+bones/38/rotation = Quaternion(-0.008186197, 0.09394183, 0.086425245, 0.9917856)
+bones/38/scale = Vector3(0.9999953, 0.99999803, 0.99998724)
+bones/40/position = Vector3(-0.199691, -0.13274208, -0.030211668)
+bones/40/rotation = Quaternion(-0.4750222, 0.592343, 0.5780732, -0.29885632)
+bones/40/scale = Vector3(1, 0.9999998, 1)
+bones/41/position = Vector3(5.3734436e-08, 0.31996444, -7.235674e-08)
+bones/41/rotation = Quaternion(9.313224e-10, 2.156012e-06, -3.3527613e-08, 1)
+bones/41/scale = Vector3(0.99999994, 1.0000002, 1)
+bones/43/position = Vector3(0.214968, -0.13261786, -0.025120175)
+bones/43/rotation = Quaternion(0.5297773, 0.5430535, 0.52997166, 0.3788919)
+bones/43/scale = Vector3(0.9999999, 0.9999998, 0.9999999)
+bones/44/position = Vector3(7.4923445e-09, 0.31203517, 2.854025e-08)
+bones/44/rotation = Quaternion(6.519258e-09, 1.4151447e-06, 3.8649887e-08, 1)
+bones/44/scale = Vector3(1, 1, 0.99999994)
+
+[node name="Emotiguy_16450_Shape_001" parent="emotigrease/Emoti/Skeleton3D" index="1" unique_id=520855674]
+blend_shapes/head__Brows-UpDown_l = 1.0
+blend_shapes/head__Brows-UpDown_r = 1.0
+
+[node name="SpringBoneSimulator3D" type="SpringBoneSimulator3D" parent="emotigrease/Emoti/Skeleton3D" index="3" unique_id=96135287]
+transform = Transform3D(0.8755573, -0.48311427, -5.7591716e-08, 0.48311424, 0.87555724, -1.4834718e-08, 5.7591716e-08, -1.4834711e-08, 0.99999994, 0, 0, 0)
+setting_count = 5
+settings/0/root_bone_name = "lHand"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "lIndex1"
+settings/0/end_bone = 6
+settings/0/extend_end_bone = false
+settings/0/center_from = 0
+settings/0/individual_config = false
+settings/0/rotation_axis = 3
+settings/0/radius/value = 0.02
+settings/0/radius/damping_curve = null
+settings/0/stiffness/value = 8.0
+settings/0/stiffness/damping_curve = null
+settings/0/drag/value = 0.4
+settings/0/drag/damping_curve = null
+settings/0/gravity/value = 1.0
+settings/0/gravity/damping_curve = null
+settings/0/gravity/direction = Vector3(0, -1, 0)
+settings/0/joints/0/bone_name = "lHand"
+settings/0/joints/0/bone = 1
+settings/0/joints/1/bone_name = "lIndex1"
+settings/0/joints/1/bone = 6
+settings/0/enable_all_child_collisions = true
+settings/0/exclude_collision_count = 0
+settings/1/root_bone_name = "rHand"
+settings/1/root_bone = 18
+settings/1/end_bone_name = "rIndex1"
+settings/1/end_bone = 27
+settings/1/extend_end_bone = false
+settings/1/center_from = 0
+settings/1/individual_config = false
+settings/1/rotation_axis = 3
+settings/1/radius/value = 0.02
+settings/1/radius/damping_curve = null
+settings/1/stiffness/value = 8.0
+settings/1/stiffness/damping_curve = null
+settings/1/drag/value = 0.4
+settings/1/drag/damping_curve = null
+settings/1/gravity/value = 1.0
+settings/1/gravity/damping_curve = null
+settings/1/gravity/direction = Vector3(0, -1, 0)
+settings/1/joints/0/bone_name = "rHand"
+settings/1/joints/0/bone = 18
+settings/1/joints/1/bone_name = "rIndex1"
+settings/1/joints/1/bone = 27
+settings/1/enable_all_child_collisions = true
+settings/1/exclude_collision_count = 0
+settings/2/root_bone_name = "lFoot"
+settings/2/root_bone = 43
+settings/2/end_bone_name = "lToe"
+settings/2/end_bone = 44
+settings/2/extend_end_bone = false
+settings/2/center_from = 0
+settings/2/individual_config = false
+settings/2/rotation_axis = 3
+settings/2/radius/value = 0.02
+settings/2/radius/damping_curve = null
+settings/2/stiffness/value = 1.0
+settings/2/stiffness/damping_curve = null
+settings/2/drag/value = 0.4
+settings/2/drag/damping_curve = null
+settings/2/gravity/value = 0.0
+settings/2/gravity/damping_curve = null
+settings/2/gravity/direction = Vector3(0, -1, 0)
+settings/2/joints/0/bone_name = "lFoot"
+settings/2/joints/0/bone = 43
+settings/2/joints/1/bone_name = "lToe"
+settings/2/joints/1/bone = 44
+settings/2/enable_all_child_collisions = true
+settings/2/exclude_collision_count = 0
+settings/3/root_bone_name = "rFoot"
+settings/3/root_bone = 40
+settings/3/end_bone_name = "rToe"
+settings/3/end_bone = 41
+settings/3/extend_end_bone = false
+settings/3/center_from = 0
+settings/3/individual_config = false
+settings/3/rotation_axis = 3
+settings/3/radius/value = 0.02
+settings/3/radius/damping_curve = null
+settings/3/stiffness/value = 2.0
+settings/3/stiffness/damping_curve = null
+settings/3/drag/value = 0.4
+settings/3/drag/damping_curve = null
+settings/3/gravity/value = 0.0
+settings/3/gravity/damping_curve = null
+settings/3/gravity/direction = Vector3(0, -1, 0)
+settings/3/joints/0/bone_name = "rFoot"
+settings/3/joints/0/bone = 40
+settings/3/joints/1/bone_name = "rToe"
+settings/3/joints/1/bone = 41
+settings/3/enable_all_child_collisions = true
+settings/3/exclude_collision_count = 0
+settings/4/root_bone_name = "head"
+settings/4/root_bone = 35
+settings/4/end_bone_name = "lEye"
+settings/4/end_bone = 36
+settings/4/extend_end_bone = false
+settings/4/center_from = 0
+settings/4/individual_config = false
+settings/4/rotation_axis = 3
+settings/4/radius/value = 0.02
+settings/4/radius/damping_curve = null
+settings/4/stiffness/value = 9.0
+settings/4/stiffness/damping_curve = null
+settings/4/drag/value = 0.4
+settings/4/drag/damping_curve = null
+settings/4/gravity/value = 0.0
+settings/4/gravity/damping_curve = null
+settings/4/gravity/direction = Vector3(0, -1, 0)
+settings/4/joints/0/bone_name = "head"
+settings/4/joints/0/bone = 35
+settings/4/joints/1/bone_name = "lEye"
+settings/4/joints/1/bone = 36
+settings/4/enable_all_child_collisions = true
+settings/4/exclude_collision_count = 0
+
+[node name="hair" parent="emotigrease/Emoti/Skeleton3D" index="4" unique_id=639799164]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1785661530]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0.8191736, -2.2396083)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1955644174]
+environment = SubResource("Environment_tefeu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=570678150]
+transform = Transform3D(1, 0, 0, 0, -0.715778, -0.6983279, 0, 0.6983279, -0.715778, 0, 0, 0)
+sky_mode = 2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="DirectionalLight3D" unique_id=617809602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3525863, -2.5009046, 0.031466365)
+light_energy = 2.58
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="DirectionalLight3D" unique_id=895541313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9920695, -1.3653536, 1.1393335)
+light_color = Color(1, 0.824, 0.66999996, 1)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="DirectionalLight3D" unique_id=510412239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9512188, 1.5214727, -1.8196297)
+light_color = Color(1, 0, 0.2666664, 1)
+light_energy = 3.305
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="DirectionalLight3D" unique_id=1439892864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3533044, 0.9131756, -1.1961323)
+light_color = Color(0, 0.5395581, 0.98402566, 1)
+light_energy = 5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2037369054]
+libraries/ = SubResource("AnimationLibrary_tefeu")
+
+[node name="Intro Disclaim" type="Control" parent="." unique_id=1152330457]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_tbgi4")
+
+[node name="Panel" type="Panel" parent="Intro Disclaim" unique_id=288342879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyhfs")
+
+[node name="Label" type="Label" parent="Intro Disclaim" unique_id=842209479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "GreaseJR is running!
+The window is invisible, it hasn't crashed!
+This notice will hide momentarily."
+label_settings = SubResource("LabelSettings_tbgi4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UI" parent="." unique_id=1032799128 instance=ExtResource("6_tefeu")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1486261418]
+stream = SubResource("AudioStreamMicrophone_tipki")
+autoplay = true
+bus = &"aaa"
+
+[connection signal="pre_tts" from="ElevenLabs" to="." method="_on_eleven_labs_pre_tts"]
+[connection signal="start" from="ElevenLabs" to="." method="_on_eleven_labs_start"]
+[connection signal="TTS" from="StreamerBOT" to="." method="_on_streamer_bot_tts"]
+[connection signal="settings_updated" from="UI" to="." method="_on_ui_settings_updated"]
+
+[editable path="emotigrease"]

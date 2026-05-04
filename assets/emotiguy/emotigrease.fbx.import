@@ -1,0 +1,92 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bviex80uj30gc"
+path="res://.godot/imported/emotigrease.fbx-f3a8fa2630d6336aa76b1296d90e128e.scn"
+
+[deps]
+
+source_file="res://assets/emotiguy/emotigrease.fbx"
+dest_files=["res://.godot/imported/emotigrease.fbx-f3a8fa2630d6336aa76b1296d90e128e.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path="uid://ciqn3pq71vs85"
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Eyeball": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/eye.tres",
+"use_external/path": "uid://douknpvjxofye"
+},
+"Gloves": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/gloves.tres",
+"use_external/path": "uid://ddw1sqo03tdpe"
+},
+"InnerMouth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/innermouth.tres",
+"use_external/path": "uid://3yulwq4q62co"
+},
+"Pupil": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/pupil.tres",
+"use_external/path": "uid://sriwqnxk13hx"
+},
+"Skin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/skin.tres",
+"use_external/path": "uid://drelklcq555b1"
+},
+"Teeth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/teeth.tres",
+"use_external/path": "uid://ddrfm5nps7nv"
+},
+"Tongue": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/tongue.tres",
+"use_external/path": "uid://co1nbl4ivpqd0"
+},
+"hair": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/hair.tres",
+"use_external/path": "uid://b2x4u4bl8gd1"
+},
+"meatwad": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/emotiguy/meatwadtat.tres",
+"use_external/path": "uid://d24o075lrk20s"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

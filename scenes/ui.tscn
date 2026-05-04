@@ -1,0 +1,393 @@
+[gd_scene format=3 uid="uid://n63kn0gikt7d"]
+
+[ext_resource type="Script" uid="uid://dj0n8xxaho32e" path="res://scenes/ui.gd" id="1_yev5y"]
+[ext_resource type="Script" uid="uid://xuj365cx2yoi" path="res://addons/tattomoosa.spinner/spinner.gd" id="2_gdt2y"]
+[ext_resource type="Texture2D" uid="uid://7njrciql4wl1" path="res://assets/misc/down_arrow.svg" id="2_wm3ai"]
+[ext_resource type="Script" uid="uid://bimr75ubdxktw" path="res://scripts/volumebar.gd" id="3_8dubc"]
+[ext_resource type="LabelSettings" uid="uid://e45jxmo7bm04" path="res://assets/fonts/standard_label.tres" id="4_p7vwb"]
+[ext_resource type="FontFile" uid="uid://doivdj2dgw5dq" path="res://assets/fonts/Uni Sans Heavy Italic.otf" id="6_8dubc"]
+[ext_resource type="LabelSettings" uid="uid://36v7rogffhc3" path="res://assets/fonts/hero_label.tres" id="7_ktti3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdt2y"]
+bg_color = Color(0, 0, 0, 0.29803923)
+corner_radius_top_left = 48
+corner_radius_top_right = 12
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3ai"]
+bg_color = Color(0.11, 0.11, 0.11, 1)
+
+[node name="UI" type="Control" unique_id=1032799128]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yev5y")
+
+[node name="SpinnerBox" type="HBoxContainer" parent="." unique_id=1732414426]
+modulate = Color(1, 1, 1, 0.3372549)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -40.0
+offset_right = 48.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="Spinner" type="Range" parent="SpinnerBox" unique_id=727607670]
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = true
+custom_minimum_size = Vector2(30, 30)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 0
+focus_behavior_recursive = 0
+mouse_filter = 0
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme = null
+theme_type_variation = &""
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+value = 0.0
+exp_edit = false
+rounded = false
+allow_greater = false
+allow_lesser = false
+script = ExtResource("2_gdt2y")
+metadata/_custom_type_script = "uid://xuj365cx2yoi"
+
+[node name="text" type="Label" parent="SpinnerBox" unique_id=1022627789]
+layout_mode = 2
+label_settings = ExtResource("4_p7vwb")
+
+[node name="Settings" type="Control" parent="." unique_id=2086204445]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings" unique_id=163152264]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 693.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 150
+
+[node name="Panel" type="Panel" parent="Settings/MarginContainer" unique_id=773800538]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gdt2y")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Settings/MarginContainer/Panel" unique_id=18116287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 67
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2" unique_id=625052067]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer" unique_id=2107105716]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Labels" type="VBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1793066187]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeviceLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=311109659]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Microphone Device"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="MicInputLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=1899800509]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Microphone Mode"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="MouthAnimationLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=618108374]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Mouth Animation Threshold"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="PoseAnimationLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=885946634]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Pose Animation Threshold"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="PoseCooldownLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=2026761344]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Pose Cooldown"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="MouthshapeDelayLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=517350376]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Mouthshape Delay"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="ModelVariantLabel" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=2026562038]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Model Variant"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="ElevenLabs Info" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/Labels" unique_id=724541656]
+unique_name_in_owner = true
+modulate = Color(0.9911199, 0.8873331, 0, 1)
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+tooltip_text = "To use this with ElevenLabs TTS, you must
+edit settings.cfg manually with your settings
+and API key, then install the StreamerBOT
+action provided. See readme.txt for more info."
+mouse_filter = 1
+text = "ElevenLabs ⓘ"
+label_settings = ExtResource("4_p7vwb")
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=202931792]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1791580398]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeviceMenu" type="MenuButton" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=2006916699]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_8dubc")
+text = "Device"
+icon = ExtResource("2_wm3ai")
+flat = false
+
+[node name="MicModeBox" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1214958841]
+layout_mode = 2
+
+[node name="MicModeValue" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MicModeBox" unique_id=1960529374]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "OFF"
+label_settings = ExtResource("4_p7vwb")
+horizontal_alignment = 1
+
+[node name="MicModeCheckbox" type="CheckButton" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MicModeBox" unique_id=548869599]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 6
+icon_alignment = 1
+
+[node name="MouthAnimationThresholdSliderBox" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1451204742]
+layout_mode = 2
+
+[node name="MouthAnimationThresholdPercentage" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MouthAnimationThresholdSliderBox" unique_id=42997124]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "-20db"
+label_settings = ExtResource("4_p7vwb")
+horizontal_alignment = 1
+
+[node name="MouthAnimationThresholdSlider" type="HSlider" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MouthAnimationThresholdSliderBox" unique_id=53185001]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 30.0
+step = 0.1
+
+[node name="PoseAnimationThresholdSliderBox" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1306385202]
+layout_mode = 2
+
+[node name="PoseAnimationThresholdPercentage" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/PoseAnimationThresholdSliderBox" unique_id=1200442069]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "-20db"
+label_settings = ExtResource("4_p7vwb")
+horizontal_alignment = 1
+
+[node name="PoseAnimationThresholdSlider" type="HSlider" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/PoseAnimationThresholdSliderBox" unique_id=163647392]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 30.0
+step = 0.1
+
+[node name="PoseCooldown" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=2022725907]
+layout_mode = 2
+
+[node name="PoseCooldownTime" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/PoseCooldown" unique_id=1559923767]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "-20db"
+label_settings = ExtResource("4_p7vwb")
+horizontal_alignment = 1
+
+[node name="PoseCooldownSlider" type="HSlider" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/PoseCooldown" unique_id=147007914]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 5.0
+step = 0.1
+
+[node name="MouthshapeDelaySliderBox" type="HBoxContainer" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1919790111]
+layout_mode = 2
+
+[node name="MouthshapeDelayValue" type="Label" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MouthshapeDelaySliderBox" unique_id=1205810077]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "0.5"
+label_settings = ExtResource("4_p7vwb")
+horizontal_alignment = 1
+
+[node name="MouthshapeDelaySlider" type="HSlider" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/MouthshapeDelaySliderBox" unique_id=1090981273]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="ModelMenu" type="MenuButton" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1043158680]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_8dubc")
+text = "Model
+"
+icon = ExtResource("2_wm3ai")
+flat = false
+
+[node name="VolumeBar" type="ProgressBar" parent="Settings/MarginContainer/Panel/MarginContainer2/VBoxContainer" unique_id=1458539189]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_wm3ai")
+min_value = -60.0
+max_value = 30.0
+value = -19.92
+show_percentage = false
+script = ExtResource("3_8dubc")
+mic_bus_name = "aaa"
+metadata/_custom_type_script = "uid://bimr75ubdxktw"
+
+[node name="Label" type="Label" parent="Settings" unique_id=1546363484]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 110.09
+offset_right = 360.0
+offset_bottom = 140.09001
+grow_horizontal = 2
+text = "Settings"
+label_settings = ExtResource("7_ktti3")
+horizontal_alignment = 1

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d24o075lrk20s"]
+
+[ext_resource type="Texture2D" uid="uid://bdoxo0jtuwajy" path="res://assets/emotiguy/meatwad.png" id="1_jf0iq"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_jf0iq")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://drelklcq555b1"]
+
+[ext_resource type="Texture2D" uid="uid://cwnslhplll3qq" path="res://assets/emotiguy/mac orb.png" id="1_ax7w1"]
+
+[resource]
+albedo_texture = ExtResource("1_ax7w1")
+roughness = 0.55
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.49
+subsurf_scatter_skin_mode = true
