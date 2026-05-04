@@ -230,7 +230,7 @@ size_flags_vertical = 1
 tooltip_text = "To use this with ElevenLabs TTS, you must
 edit settings.cfg manually with your settings
 and API key, then install the StreamerBOT
-action provided. See readme.txt for more info."
+action provided. See the readme for more info."
 mouse_filter = 1
 text = "ElevenLabs ⓘ"
 label_settings = ExtResource("4_p7vwb")
