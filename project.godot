@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="greasejr"
+config/version="1.0"
 run/main_scene="uid://biju7fhjiginh"
 config/features=PackedStringArray("4.6")
 config/icon="uid://ds052k0uu6sk2"
