@@ -1,4 +1,6 @@
 
+<img width="540" height="320" alt="greasejr" src="https://github.com/user-attachments/assets/e6c349a6-6dbc-4cbe-8c6e-09a8506b156d" />
+
 # GreaseJR
 #### ⚠️ Important! ⚠️ GreaseJR is in very early development, and thus is lacking many features and is likely riddled with bugs. Use at your own discretion.
 ---
