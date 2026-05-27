@@ -1,6 +1,8 @@
 extends Node
 
 signal TTS(payload: Dictionary)
+signal killGJ
+
 
 var ws: WebSocketPeer = WebSocketPeer.new()
 var url: String = "ws://127.0.0.1:8080/"
@@ -54,5 +56,7 @@ func _parse_message(message: String) -> void:
 			
 			if custom_data.get("customevent") == "greaseJR" or data.get("customevent") == "greaseJR":
 				TTS.emit(custom_data)
+			if custom_data.get("customevent") == "greaseJR_kill" or data.get("customevent") == "greaseJR_kill":
+				killGJ.emit()
 	else:
 		printerr("Failed to parse JSON")

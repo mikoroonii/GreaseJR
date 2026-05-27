@@ -56,6 +56,8 @@ func _ready() -> void:
 	mesh_instance.set("blend_shapes/head_Brows-UpDown_r", 1.0)
 	mesh_instance.set("blend_shapes/THICC", 1.0)
 	
+	eleven_labs_audio.finished.connect(_on_eleven_labs_audio_finished)
+	
 	_on_ui_settings_updated()
 
 func _apply_model(model: int) -> void:
@@ -155,12 +157,20 @@ func _input(event: InputEvent) -> void:
 		settings.visible = not settings.visible
 
 func _on_eleven_labs_pre_tts() -> void:
-	anim_player_root.play("in")
+	if anim_player_root.current_animation != "in":
+		anim_player_root.play("in")
 	new_headshape()
 	new_pose()
-	await eleven_labs_audio.finished
-	animate_mouth = false
-	anim_player_root.play("OUT")
+
+func _on_eleven_labs_audio_finished() -> void:
+	await get_tree().process_frame
+	
+	var is_empty: bool = eleven_labs.audio_queue.is_empty() and eleven_labs.request_queue.is_empty()
+	var is_working: bool = eleven_labs.is_fetching or eleven_labs.is_preparing
+	
+	if is_empty and not is_working:
+		animate_mouth = false
+		anim_player_root.play("OUT")
 
 func _on_eleven_labs_start() -> void:
 	animate_mouth = true
@@ -168,3 +178,7 @@ func _on_eleven_labs_start() -> void:
 func _on_streamer_bot_tts(payload: Dictionary) -> void:
 	if payload.has("tts"):
 		eleven_labs.generate_and_play(payload["tts"], "Mac")
+
+
+func _on_streamer_bot_kill_gj() -> void:
+	$AnimationPlayer.play("Death")

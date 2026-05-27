@@ -108,3 +108,17 @@ func _try_play_next() -> void:
 
 func _on_audio_finished() -> void:
 	_try_play_next()
+
+func skip_current_message() -> void:
+	if audio_player.playing:
+		audio_player.stop()
+	
+	is_preparing = true
+	
+	await get_tree().create_timer(2.0).timeout
+	
+	if not is_inside_tree():
+		return
+		
+	is_preparing = false
+	_try_play_next()
